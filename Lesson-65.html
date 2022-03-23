@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-65</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 65.1
+        let arr = [
+            ['a', 'b', 'c'],
+            ['d', 'e', 'f'],
+            ['g', 'h', 'i'],
+            ['j', 'k', 'l'],
+        ];
+        console.log(arr[3][2]);
+        console.log(arr[1][1]);
+        console.log(arr[2][0]);
+        console.log(arr[0][0]);
+        //Задача 65.2
+        arr = [
+            [1, 2],
+            [3, 4],
+            [5, 6]
+        ];
+        let summ = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                summ = summ + arr[i][j];
+            }
+        }
+        console.log(summ);
+        //Задача 65.3
+        arr = [
+            [
+                [1, 2],
+                [3, 4],
+            ],
+            [
+                [5, 6],
+                [7, 8],
+            ],
+        ];
+        summ = 0;
+        for (let subArr of arr) {
+            for (let elem of subArr) {
+                for (let elm of elem) {
+                    summ = summ + elm;
+                }
+            }
+        }
+        console.log(summ);
+
+        //Задача 65.4
+        arr = [
+            [1, 2, 3, [4, 5, [6, 7]]],
+            [8, [9, 10]]
+        ];
+        summ = 0;
+        let arr1 = arr.pop();
+        let arr11 = arr1.pop();
+        summ = summ + +arr1;
+        for (let elem of arr11) {
+            summ = summ + elem;
+        }
+        let arr2 = arr.pop();
+        let arr21 = arr2.pop();
+        for (let elem of arr2) {
+            summ = summ + elem;
+        }
+        let arr22 = arr21.pop();
+        for (let elem of arr21) {
+            summ = summ + elem;
+        }
+        for (let elem of arr22) {
+            summ = summ + elem;
+        }
+
+        console.log(summ);
+        //Через map или reduce было бы проще, но пока не дошли до этой темы. поэтому решение такое, не хотелось тупо складывать элементы.
+    </script>
+</body>
+
+</html>

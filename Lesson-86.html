@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.UF.Ex</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 1
+        
+        function getSummQuad(params) {
+            let summ = 0;
+            for (let elem of params) {
+                summ = summ + elem * elem;
+            }
+            return summ;
+        }
+        let arr = [1, 2, 3, 4, 5];
+        alert(getSummQuad(arr));
+
+        //Задача 2
+        function getDigitsSum(params) {
+            let str = String(params);
+            let arr = str.split('');
+            let summ = 0;
+            for (let elem of arr) {
+                summ += Number(elem);
+            }
+            return summ;
+        }
+        alert(getDigitsSum(13));
+
+        //Задача 3
+        let arr3 = [];
+
+        function getDivisors(params) {
+            for (let i = 1; i <= params; i++) {
+                if (params % i == 0) {
+                    arr3.push(i);
+
+                }
+
+            }
+            return arr3;
+        }
+        console.log(getDivisors(874));
+
+        //Задача 4
+        function reverseStr(params) {
+
+            return params.split('').reverse().join('');
+        }
+        alert(reverseStr('марш'));
+
+        //Задача 5
+        let arr5 = [];
+
+        function delElem(params, arr) {
+
+            for (let elem of arr) {
+                if (params != elem) {
+                    arr5.push(elem);
+                }
+            }
+            return arr5;
+        }
+        console.log(delElem(2, [1, 2, 2, 4, 3, 2]));
+
+
+        //Задача 6
+        let arr6 = [];
+
+        function AddArr(params) {
+            for (let i = 1; i <= params; i++) {
+
+                arr6.push(i);
+            }
+            return arr6;
+        }
+        console.log(AddArr(8));
+
+        //Задача 7
+        let arr7 = [];
+
+        function getDualArr(params1, params2) {
+            for (params1; params1 <= params2; params1++) {
+                arr7.push(params1);
+            }
+            return arr7;
+        }
+        console.log(getDualArr(5, 10));
+    </script>
+</body>
+
+</html>

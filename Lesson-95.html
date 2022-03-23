@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.AR</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 1
+        //получаю случайное число в заданном диапазоне
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let arr = [1,2,3,4,5];
+        // let key = getRandomInt(0, arr.length - 1);
+        // console.log(key);
+
+        ///console.log(getRandomInt(0, arr.length - 1));
+
+        function random(arr) {
+            // let key = getRandomInt(0, arr.length - 1);
+            return arr[getRandomInt(0, arr.length - 1)];
+        }
+       // console.log(random(arr));
+
+        //Задача 2
+
+        let summ = 0;
+        for (let i = 1; i <= 3; i++) {
+
+            summ = summ + random(arr);
+            //console.log(summ);
+        }
+        console.log(summ);
+    </script>
+
+</body>
+
+</html>

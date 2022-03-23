@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-92old</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+
+        function randoms(arr, length) {
+            return first(shuffle(arr), length);
+        }
+
+        function first(arr, length) {
+            return arr.slice(0, length);
+        }
+
+        function shuffle(arr) {
+            let result = [];
+
+            while (arr.length > 0) {
+                let random = getRandomInt(0, arr.length - 1);
+                let elem = arr.splice(random, 1)[0];
+                result.push(elem);
+            }
+
+            return result;
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log( first([1, 2, 3, 4, 5], 3) );
+    </script>
+</body>
+
+</html>

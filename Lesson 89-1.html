@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.AFC</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        let num = 12345;
+
+        function getSum(arr) {
+            let sum = 0;
+
+            for (let elem of arr) {
+                sum += Number(elem);
+            }
+
+            return sum;
+        }
+
+
+        function getDigits(num) {
+            return String(num).split('');
+        }
+        console.log(getSum(getDigits(num)));
+
+        //Задача 2
+
+        function getAvg(arr) {
+            let sum = 0;
+
+            for (let elem of arr) {
+                sum += elem;
+            }
+
+            return sum / arr.length;
+        }
+
+        function getDivisors(num) {
+            let result = [];
+
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        console.log(getAvg(getDivisors(24)));
+    </script>
+</body>
+
+</html>

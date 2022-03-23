@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.PU</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        let arr = [];
+        let params = 100;
+        for (let j = 1; j <= params; j++) {
+            if (isPrime(j)) {
+                arr.push(j);
+            }
+
+        }
+
+        function isPrime(params) {
+            for (let i = 2; i < params; i++) {
+                if (params % i == 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        console.log(arr);
+
+        //Задача 2
+        let arrYear = [];
+        for (let i = 1; i <= 2030; i++) {
+            if (getDigitsSum(i) == 13) {
+                arrYear.push(i);
+            }
+        }
+
+        function getDigitsSum(num) {
+            let sum = 0;
+            let digits = String(num).split('');
+
+            for (let digit of digits) {
+                sum += Number(digit);
+            }
+
+            return sum;
+        }
+        console.log(arrYear);
+
+        //Задача 3
+        let nums = [123, 456, 789];
+        let result = [];
+
+        function flipNumber(params) {
+            for (let param of params) {
+                result.push(String(param).split('').reverse().join(''));
+
+            }
+        }
+        flipNumber(nums)
+        console.log(result);
+
+        //Задача 4
+        let num1 = 111;
+        let num2 = 304;
+
+        if (checkSumPairsNumbers(num1) == checkSumPairsNumbers(num2)) {
+            alert('суммы цифр совпадают');
+
+        } else {
+            alert('суммы цифр не совпадают');
+        }
+
+        function checkSumPairsNumbers(params) {
+            let digits = String(params).split('');
+            let digitsSum = 0;
+            for (let digit of digits) {
+                digitsSum += Number(digit);
+            }
+            return digitsSum;
+        }
+        //Задача 5
+        nums = [12, 24, 35, 14];
+
+        for (let num of nums) {
+            console.log(num + ': ' + getDivisors(num).join(', '));
+        }
+
+        function getDivisors(num) {
+            let result = [];
+
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    result.push(i);
+                }
+            }
+
+            return result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-56</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 56.1
+        let arr = [];
+        arr.push(1);
+        arr.push(2);
+        arr.push(3);
+        arr.push(4);
+        arr.push(5);
+        arr.push(6);
+        arr.push(7);
+        arr.push(8);
+        arr.push(9);
+        arr.push(10);
+        console.log(arr);
+        //Задача 56.2
+        arr = [];
+        for (let i = 1; i <= 10; i++) {
+            arr.push(i);
+        }
+        console.log(arr);
+        //Задача 56.3
+        arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr.push('x');
+        }
+        console.log(arr);
+        //Задача 56.4
+        arr = [];
+        for (let i = 1; i <= 10; i++) {
+            arr.push(parseInt(Math.random(i) * 10));
+        }
+        console.log(arr);
+        //Задача 56.5
+        arr = [1, 2, 3, 4, 5, 6];
+        let brr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                brr.push(arr[i]);
+            }
+        }
+        console.log(brr);
+        //Задача 56.6
+        arr = ['a', 'b', 'c', 'd', 'e'];
+        brr = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+            brr.push(arr[i]);
+        }
+        console.log(brr);
+        //Задача 56.7
+        arr = [];
+        arr.push('a');
+        arr.push('b');
+        arr.push('c');
+        console.log(arr);
+        //Задача 56.8
+        arr = [];
+        for (let i = 1; i <= 5; i++) {
+            arr.push(i);
+        }
+        console.log(arr);
+        //Задача 56.9
+        arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let result = [];
+        for (let elem of arr) {
+            if (elem % 2 != 0) {
+                result.push(elem);
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

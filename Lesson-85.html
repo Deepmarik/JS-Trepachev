@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.UF.Rt</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        function func(params) {
+            return (params * params * params);
+
+        }
+        let result = func(3);
+        alert(result);
+
+        //Задача 2
+        function sqr(params) {
+            return Math.sqrt(params);
+        }
+        result = sqr(3) + sqr(4);
+        alert(result);
+
+        //Задача 3
+        function sqrt(num) {
+            return Math.sqrt(num);
+        }
+
+        function round(num) {
+            return num.toFixed(3);
+        }
+        result = round(sqrt(2));
+        alert(result);
+
+        //Задача 4
+        function sqrt(params) {
+            return Math.sqrt(params)
+
+        }
+
+        function Summa(num1, num2, num3) {
+            return num1 + num2 + num3;
+        }
+        result = Summa(sqrt(2), sqrt(3), sqrt(4));
+        alert(result);
+
+        //Задача 5
+        function sqrt(params) {
+            return Math.sqrt(params)
+
+        }
+
+        function Summa(num1, num2, num3) {
+            return num1 + num2 + num3;
+        }
+
+        function round1(num) {
+            return num.toFixed(3);
+        }
+        result = round1(Summa(sqrt(2), sqrt(3), sqrt(4)));
+        alert(result);
+
+        //Задача 6
+        function func6(num) {
+            return num;
+
+            let result = num * num;
+            return result;
+        }
+
+        alert(func6(3));
+        //Выведется "3", тк после первого return (строка 71) код не выполнится.
+
+        //Задача 7
+        function func7(num) {
+            if (num <= 0) {
+                return Math.abs(num);
+            } else {
+                return num * num;
+            }
+        }
+
+        alert(func7(10));
+        alert(func7(-5));
+        // в первом случае (func(10)) выведется "100", тк num>0 работает ветвь else;
+        //во втором "5", тк выполняется условие if выводится модуль числа(-5);
+
+        //Задача 8
+        // в первом случае (func(10)) выведется "100", тк условие if не выполняется, переход на второй return;
+        //во втором "5", тк выполняется условие if выводится модуль числа(-5);
+
+        //Задача 9
+        /*Автор хотел найти сумму чисел.Так как return расположен внутри цикла, в этом случае цикл прокрутится лишь одну итерацию и 
+        произойдет автоматический выход из функции и цикла. За одну итерацию цикла в переменной sum окажется лишь число 1, а не вся нужная сумма.*/
+
+        function func9(num) {
+            let sum = 0;
+
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+
+            }
+            return sum;
+        }
+
+        alert(func9(5));
+
+        //Задача 10
+        let i;
+
+        function division(params) {
+            i = 1;
+            while (true) {
+                params /= 2;
+                if (params < 10) {
+                    return i;
+
+                }
+                ++i;
+            }
+        }
+        division(40);
+        alert(i);
+
+        //Задача 11
+        function func11(num1, num2) {
+
+            if (num1 > 0 && num2 > 0) {
+                return num1 * num2;
+            } else {
+                return num1 - num2;
+            }
+
+        }
+        alert(func11(-3, -4));
+    </script>
+</body>
+
+</html>

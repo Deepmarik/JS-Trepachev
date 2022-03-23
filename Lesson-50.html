@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-50</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 50.1
+        let str = '';
+        for (let i = 0; i <= 5; i++) {
+            str += '0';
+        }
+        console.log(str);
+        //Задача 50.2
+        str = '';
+        for (let i = 1; i <= 9; i++) {
+            str += i;
+        }
+        document.write(str);
+        //Задача 50.3
+        str = '';
+        for (let i = 9; i >= 1; i--) {
+            str += i;
+        }
+        document.write('<br>' + str);
+        //Задача 50.4
+        str = '';
+        for (let i = 0; i <= 9; i++) {
+            str +='-'+ i;
+            if(i==9){str=str+'-';}
+        }
+        document.write('<br>' + str);
+    </script>
+</body>
+
+</html>

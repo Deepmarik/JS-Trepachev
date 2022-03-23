@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.ArDf</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function inArray(params, array) {
+            return array.indexOf(params) !== -1;
+        }
+        let arr1 = [1, 2, 3, 4, 5];
+        let arr2 = [2, 4, 3];
+        let result = [];
+        for (let elem of arr1) {
+            if (!inArray(elem, arr2)) {
+                result.push(elem);
+
+            }
+        }
+
+        function getDiff(params1, params2) {
+            let result = [];
+            for (let elem of params1) {
+                if (!inArray(elem, params2)) {
+                    result.push(elem);
+                }
+            }
+            for (let elem of params2) {
+                if (!inArray(elem, params1)) {
+                    result.push(elem);
+                }
+            }
+            return result;
+        }
+        console.log(getDiff(arr1, arr2));
+    </script>
+</body>
+
+</html>

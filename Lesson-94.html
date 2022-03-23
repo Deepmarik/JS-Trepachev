@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.LCF</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        function getGreatestCommonDivisor(params1, params2) {
+            let num;
+            for (let i = 0; i < getInt(numDivisor(params1), numDivisor(params2)).length; i++) {
+                if (getInt(numDivisor(params1), numDivisor(params2))[i] < getInt(numDivisor(params1), numDivisor(
+                        params2))[i + 1]) {
+                    num = getInt(numDivisor(params1), numDivisor(params2))[i + 1];
+
+                }
+            }
+            return num;
+        }
+
+        //получаю массив делителей
+
+        function numDivisor(params) {
+            let result = [];
+            for (let i = 1; i < params; i++) {
+                if (params % i == 0) {
+                    result.push(i);
+                }
+            }
+            console.log(result);
+            return result;
+
+        }
+
+
+        function inArray(params, array) {
+            return array.indexOf(params) !== -1;
+        }
+        // поиск пересечения массивов
+        function getInt(params1, params2) {
+            let result = [];
+            for (let elem of params1) {
+                if (inArray(elem, params2)) {
+                    result.push(elem);
+                }
+            }
+            console.log(result);
+            if (result.length == 1) {
+                console.log('простые');
+                            }
+            return result;
+        }
+
+        console.log(getGreatestCommonDivisor(4, 9));
+
+        //Задача 2
+    </script>
+</body>
+
+</html>

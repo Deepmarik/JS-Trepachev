@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-40</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 40.1
+        let arr = ['a', 'b', 'c', 'd', 'e'];
+        for (let elem of arr) {
+  
+            console.log(elem);
+        }
+        //Задача 40.2
+        arr = [1, 2, 3, 4, 5];
+        let summ = 0;
+        for (let elem of arr) {
+            summ = summ + elem;
+        }
+        console.log(summ);
+        //Задача 40.3
+        let monthArr = ['янв', 'фев', 'мрт', 'апр', 'май', 'июнь', 'июль', 'авг', 'сент', 'окт', 'нояб', 'дек'];
+        for (let elem of monthArr) {
+            console.log(elem);
+        }
+        //Задача 40.4
+        let month = 10;
+        monthArr = ['янв', 'фев', 'мрт', 'апр', 'май', 'июнь', 'июль', 'авг', 'сент', 'окт', 'нояб', 'дек'];
+        for (let i = 0; i < monthArr.length; i++) {
+            if (monthArr[i+1] == monthArr[month]) {
+                document.write(monthArr[i].italics() + ' ')
+            } else {
+                document.write(monthArr[i] + ' ')
+            }
+        }
+    </script>
+</body>
+
+</html>

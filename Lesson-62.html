@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-62</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 62.1
+        let str = '';
+        for (let i = 0; i < 5; i++) {
+            str = str + 'x' + 'x';
+            document.write(str + '<br>');
+        }
+        //Задача 62.2
+        for (let i = 1; i <= 9; i += 2) {
+            for (let j = 1; j <= i; j++) {
+                document.write(i);
+            }
+            document.write('<br>');
+        }
+        //Задача 62.3
+        for (let i = 5; i >= 0; i--) {
+            let str = '';
+            for (let j = 1; j <= i; j++) {
+                str = str + 'x' + 'x';
+            }
+            document.write(str + '<br>');
+        }
+        //Задача 62.4
+        for (let i = 9; i >= 0; i -= 2) {
+            for (let j = 0; j < i; j++) {
+                document.write(i);
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

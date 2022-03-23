@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-30</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 30.1
+        let month = 9;
+        if (month >= 3 && month <= 5) {
+            console.log('весна');
+        }
+        if (month >= 6 && month <= 8) {
+            console.log('лето');
+        }
+        if (month >= 9 && month <= 11) {
+            console.log('осень');
+        }
+        if (month <= 2 || month == 12) {
+            console.log('зима');
+        }
+        //Задача 30.2
+        let str = 'abcde';
+        if (str[0] == 'a') {
+            console.log('yes');
+        } else {
+            console.log('no');
+        }
+        //Задача 30.3
+        let num = 52345;
+        str = String(num);
+        if (str[0] != 0 && str[0] <= 3) {
+            console.log('yes');
+        } else {
+            console.log('no');
+        }
+        //Задача 30.4
+        num = 989;
+        str = String(num);
+        let i = 1;
+        let sum = 0;
+
+        if (str.length - i >= 0) {
+            sum = +sum + +str[str.length - i];
+            ++i;
+            if (str.length - i >= 0) {
+                sum = +sum + +str[str.length - i];
+                ++i;
+                if (str.length - i >= 0) {
+                    sum = +sum + +str[str.length - i];
+                    ++i;
+                }
+            }
+        }
+        console.log(sum);
+
+        //Задача 30.5
+        num = 444444;
+        str = String(num);
+        i = 1;
+        let y = str.length;
+        let sum1 = 0,
+            sum2 = 0;
+
+        if (str.length - i >= 3 || str.length - i <= 6) {
+            sum1 = +sum1 + +str[str.length - i];
+            ++i;
+            if (str.length - i >= 0) {
+                sum1 = +sum1 + +str[str.length - i];
+                ++i;
+                if (str.length - i >= 0) {
+                    sum1 = +sum1 + +str[str.length - i];
+                    ++i;
+                }
+            }
+        }
+        if (str.length - y >= 0 || str.length - y < 3) {
+            sum2 = +sum2 + +str[str.length - y];
+            --y;
+            if (str.length - y >= 0) {
+                sum2 = +sum2 + +str[str.length - y];
+                --y;
+                if (str.length - y >= 0) {
+                    sum2 = +sum2 + +str[str.length - y];
+                    --y;
+                }
+            }
+        }
+        if (sum1==sum2){console.log('yes');}
+        else{console.log('no');}
+        console.log(sum1 + sum2);
+    </script>
+</body>
+
+</html>

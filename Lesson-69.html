@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-69</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 69.1
+        let summ = 0;
+        let obj = {
+            1: {
+                1: 11,
+                2: 12,
+                3: 13,
+            },
+            2: {
+                1: 21,
+                2: 22,
+                3: 23,
+            },
+            3: {
+                1: 24,
+                2: 25,
+                3: 26,
+            },
+        }
+        for (let key in obj) {
+            let subObj = obj[key];
+            for (let subkey in subObj) {
+                summ += subObj[subkey];
+            }
+        }
+        console.log(summ);
+    </script>
+</body>
+
+</html>

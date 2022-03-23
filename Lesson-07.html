@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 7</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        //Задача 7.1
+        let sec = 60;
+        let day = sec ** 3;
+        alert("Количество секунд в сутках " + day);
+        //Задача 7.2
+        let mes = day * 30;
+        alert("Количество секунд в месяце " + mes);
+        //Задача 7.3
+        alert("Количество секунд в году " + day * 365);
+        //Задача 7.4
+        let min = 60;
+        let minToDay = min * 24;
+        alert("Количество минут в сутках " + minToDay);
+        //Задача 7.5
+        alert("Количество минут в году " + minToDay * 365);
+        //Задача 7.6
+        
+        let Kb=2**10;
+        let Mb=Kb*Kb;
+        alert("Количество байт в Мбайте "+Mb);
+        //Задача 7.7
+        let Gb=Mb*Kb;
+        alert("Количество байт в Гигабайте "+Gb);
+        //Задача 7.8
+        alert("Количество байт в 10 Гигабайтах "+Gb*10);
+        //Задача 7.9
+        let Tb=Gb*Kb;
+        alert("Количество байт в Терабайте "+Tb);
+        //Задача 7.10
+        
+        alert("Количество Кбайт в Терабайте "+ Tb/Kb);
+        //Задача 7.11
+        let r=10;
+        let s=Math.PI*r**2;
+        alert("Площадь круга "+s);
+        //Задача 7.12
+        let a=5;
+        s=a**2;
+        alert("Площадь квадрата "+s);
+        //Задача 7.13
+        let b=6;
+        a=4;
+        s=a*b;
+        alert("Площадь прямоугольника "+s);
+        //Задача 7.14
+        let p=2*(a+b);
+        alert("Периметр прямоугольника "+p);
+        //Задача 7.15
+        let tc=100;
+        let tf=tc*9/5-32;
+        alert("Температура в градусах по F "+tf);
+        //Задача 7.16
+        tf=450;
+        tc=(tf-32)*5/9;
+        alert("Температура в градусах по C "+tc);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-29</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 29.1
+        let min = 21;
+        if (min <= 20) {
+            console.log('первая треть часа');
+        }
+        if (min > 20 && min <= 40) {
+            console.log('вторая треть часа');
+        }
+        if (min > 40 && min <= 60) {
+            console.log('третья треть часа');
+        }
+        //Задача 29.2
+        let arr = [4, 5, 6];
+        if (arr.length == 3) {
+            let sum = +arr[arr.length - 1] + +arr[arr.length - 2] + +arr[arr.length - 3];
+            console.log(sum);
+        } else {
+            alert('в массиве не три элемента');
+        }
+
+        //Задача 29.3
+        let num = 11;
+        let str = String(num);
+        if (str[str.length - 1] == 0) {
+            console.log('yes');
+        } else {
+            console.log('no');
+        }
+        //Задача 29.4
+        num = 18;
+        str = String(num);
+        let strEnd = str.length - 1;
+        if (str[strEnd] == 0 || str[strEnd] == 2 || str[strEnd] == 4 || str[strEnd] ==
+            6 || str[str.length - 1] == 8) {
+            console.log('yes');
+        } else {
+            console.log('no');
+        }
+        //Задача 29.5
+        num = 10;
+        if (num % 2 == 0) {
+            console.log('четное');
+        } else {
+            console.log('нечетное');
+        }
+        //Задача 29.6
+        num=17;
+        if (num % 3 == 0) {
+            console.log('число кратное 3');
+        } else {
+            console.log('некратное 3');
+        }
+    </script>
+</body>
+
+</html>

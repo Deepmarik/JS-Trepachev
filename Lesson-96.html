@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.ASh</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Урок 91
+        //Задача 2
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+
+        }
+        //функция range в заданном диапазоне, заданное количество элементов массива
+        function rangeY(params1, params2, y) {
+            let arr = [];
+            for (let i = 0; i <= y; i++) {
+                arr.push(getRandomInt(params1, params2));
+            }
+            return arr;
+        }
+        console.log(rangeY(19, 30, 10));
+
+        // Задача 3
+
+        function range(params1, params2) {
+            let arr = [];
+            for (let i = 0; i <= 5; i++) {
+                arr.push(getRandomInt(params1, params2));
+            }
+            return arr;
+        }
+        console.log(range(1, 5));
+
+        function shuffle(arr) {
+            let result = [];
+
+            while (arr.length > 0) {
+                let random = getRandomInt(0, arr.length - 1);
+                let elem = arr.splice(random, 1)[0];
+                result.push(elem);
+            }
+
+            return result;
+        }
+        console.log(shuffle([1, 2, 6, 2, 5]));
+
+        function rangeRand(params1, params2) {
+            let result = [];
+            for (let i = params1; i <= params2; i++) {
+                shuffle(range(params1, params2));
+                // console.log(shuffle(range(params1, params2)));
+                //return result;
+            }
+            // return result;
+        }
+        console.log(rangeRand(3, 10));
+        console.log(result);
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-12</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 12.1
+        let str = 'abcde';
+        alert(str[0]);
+        alert(str[2]);
+        alert(str[4]);
+        //Задача 12.2
+        str = 'abcde';
+        let str2 = str[4] + str[3] + str[2] + str[1] + str[0];
+        alert(str2);
+        //Задача 12.3
+        let num = 2;
+        alert(str[num]);
+        //Задача 12.4
+        str = 'orghrogbaog';
+        alert(str[str.length - 1]);
+        //Задача 12.5
+        alert(str[str.length - 2]);
+        //Задача 12.6
+        alert(str[str.length - 3]);
+        //Задача 12.7
+        str = '12345';
+        alert(+str[0] + +str[1] + +str[2] + +str[3] + +str[4]);
+        alert(Number(str[0]) + Number(str[1]) + Number(str[2]) + Number(str[3]) + Number(str[4]));
+        //Задача 12.8
+        num = 12345;
+        str = String(num);
+        alert(Number(str[str.length - 1]) + Number(str[str.length - 2]) + Number(str[str.length - 3]) + Number(str[str
+            .length - 4]) + Number(str[str.length - 5]));
+
+        //Задача 12.9
+        alert(str[0] * str[1] * str[2] * str[3] * str[4]);
+        //Задача 12.10
+        alert(str[str.length - 1] + str[str.length - 2] +str[str.length - 3] + str[str.length - 4] + str[str.length - 5]);
+        
+    </script>
+</body>
+
+</html>

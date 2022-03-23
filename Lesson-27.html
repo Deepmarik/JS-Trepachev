@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-27</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 27.1
+        let day = 19;
+        if (day > 0 && day <= 10) {
+            alert('первая декада');
+        }
+        if (day > 10 && day <= 20) {
+            alert('вторая декада');
+        }
+        if (day > 20 && day <= 31) {
+            alert('третья декада');
+        }
+        //Задача 27.2
+        day = 10;
+        if (day > 0 && day <= 10) {
+            alert('первая декада');
+        } else if (day > 10 && day <= 20) {
+            alert('вторая декада');
+        } else if (day > 20 && day <= 31) {
+            alert('третья декада');
+        }
+        //Задача 27.3
+        day = 32;
+        if (day > 0 && day <= 10) {
+            alert('первая декада');
+        } else if (day > 10 && day <= 20) {
+            alert('вторая декада');
+        } else if (day > 20 && day <= 31) {
+            alert('третья декада');
+        } else {
+            alert('не то число');
+        }
+        //Задача 27.4
+        let num = 37;
+        if (num < 10 || num > 99) {
+            alert('число не в диапазоне 10-99');
+            
+        } else {
+            let str = String(num);
+            let sum = +str[str.length - 1] + +str[0];
+            if (sum <= 9) {
+                alert('сумма цифр однозначна');}
+                else {
+                    alert('сумма цифр двузначна');
+                }
+            }
+        
+    </script>
+</body>
+
+</html>

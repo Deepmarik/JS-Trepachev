@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.SM.St(Lesson-80)</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //js.Pm.SM.St.1
+        let str = 'js';
+        console.log(str.toUpperCase());
+
+        //js.Pm.SM.St.2
+        str = 'JS';
+        console.log(str.toLowerCase());
+
+        //js.Pm.SM.St.3
+        str = 'я учу javascript!';
+        console.log(str.substr(2, 3));
+        console.log(str.substr(6, 10));
+        console.log(str.substring(2, 5));
+        console.log(str.substring(6, 16));
+        console.log(str.slice(2, 5));
+        console.log(str.substring(6, 16));
+
+        //js.Pm.SM.St.4
+        str = 'abcde';
+        console.log(str.indexOf('c'));
+        console.log(str.lastIndexOf('c'));
+
+        //js.Pm.SM.St.5
+        str = 'abcde';
+        if (str.indexOf('a') >= 0) {
+            alert('yes');
+        }
+        console.log(str.indexOf('a'));
+
+        //js.Pm.SM.St.6
+        str = 'abcde';
+        if (str.indexOf('a') == 0) {
+            alert('yes');
+        }
+        //js.Pm.SM.St.7
+        str = 'abcde';
+        if (str.lastIndexOf('a') == str.length - 1) {
+            alert('yes-7');
+        } else alert('now-7');
+
+        //js.Pm.SM.St.8
+        str = 'http://code.mu/ru/javascript/book/prime/inbuilt/string/';
+        if (str.indexOf('http://') == 0) {
+            alert('yes-8');
+        }
+        console.log(str.indexOf('http://'));
+
+        //js.Pm.SM.St.9
+        str = 'sdfuwefhwe.html';
+        let str1 = '.html';
+        if (str.lastIndexOf('.html') == str.length - str1.length) {
+            alert('yes-9');
+        } else alert('now-9');
+        console.log(str.lastIndexOf('.html'));
+
+        //js.Pm.SM.St.10
+        str = 'http://code.mu/ru/javascript/book/prime/inbuilt/string/';
+        if (str.startsWith('http://') == true) {
+            console.log('true')
+        };
+        // console.log(str.startsWith('http://'));
+
+        //js.Pm.SM.St.11
+        str = 'sdfuwefhwe.html';
+        if (str.endsWith('.html') == true) {
+            console.log('true')
+        };
+
+        //js.Pm.SM.St.12
+        str = '1-2-3-4-5';
+        let arr = str.split('-');
+        console.log(arr);
+
+        //js.Pm.SM.St.13
+        str = '12345';
+        console.log(str.split(''));
+
+        //js.Pm.SM.St.14
+        arr = [1, 2, 3, 4, 5];
+        console.log(arr.join('-'));
+    </script>
+</body>
+
+</html>

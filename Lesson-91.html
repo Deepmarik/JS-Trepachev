@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.FP.FrNm</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        let arr = [];
+
+        function getOwnDivisors(params) {
+            let arr = [];
+            for (let i = 1; i < params; i++) {
+                if (params % i == 0) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+        // getOwnDivisors(220);
+        // console.log(arr);
+
+        //Задача 2
+        // arr = [1, 2, 4, 71, 142];
+
+        function getSum(params) {
+            let arr = [];
+            let sum = 0;
+            for (let elem of params) {
+                sum += elem;
+            }
+            return sum;
+        }
+        // console.log(getSum(arr));
+
+        //Задача 3
+
+        function isFreindly(num1, num2) {
+            let sum1 = getSum(getOwnDivisors(num1));
+            let sum2 = getSum(getOwnDivisors(num2));
+            // console.log(sum1);
+            //console.log(sum2);
+            if (sum1 == num2 && (sum2) == num1) {
+
+                return true;
+            } else {
+
+                return false;
+            }
+        }
+
+        // isFreindly(220, 284);
+
+        //Задача 4
+
+        let array = [];
+
+        function getFreindly(param1, param2) {
+
+            for (let i = param1; i < param2; i++) {
+                for (let j = i + 1; j <= param2; j++) {
+                    if (isFreindly(i, j) == true) {
+
+                        array.push([i, j]);
+                    }
+                }
+            }
+        }
+        getFreindly(220, 284);
+        console.log(array);
+
+        //Задача 5
+
+        array = [];
+        function getPerfect(params) {
+            let i;
+            for (i = 1; i < params; i++) {
+                let sum = 0;
+                for (let j = 1; j < i; j++) {
+                    if (i % j == 0) {
+                        sum += j;
+                    }
+                }
+
+                if (i == sum) {
+                    //console.log(i);
+                    array.push(i);
+
+                }
+
+            }
+            return array;
+        }
+        getPerfect(8130);
+        console.log(array);
+    </script>
+</body>
+
+</html>

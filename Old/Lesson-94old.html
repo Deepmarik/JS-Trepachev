@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-94old</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача 94.1
+        /* function isLuky(str) {
+             // let str = normalizeNum(num);
+             let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+             let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+             return sum1 == sum2;
+         }*/
+        function isLucky(num) {
+            let str = normalizeNum(num);
+
+            let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+            let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+
+            return sum1 == sum2;
+        }
+
+        function normalizeNum(num) {
+            let str = String(num);
+            if (str.length % 2 == 0) {
+                /*if (str.length == 5) {
+                    str = '0' + str;
+                }
+                if (str.length == 4) {
+                    str = '00' + str;
+                }
+                if (str.length == 3) {
+                    str = '000' + str;
+                }*/
+
+                //switch-case
+                switch (str.length) {
+                    case 2:
+                        str = '0000' + str;
+                        break;
+                    case 4:
+                        str = '00' + str;
+                        break;
+                    /*case 5:
+                        str = '0' + str;
+                        break;*/
+                    default:
+                        str == str;
+                    //  alert('6');
+                }
+            }
+            return str;
+        }
+        function normNum(num, digitsAmount) {
+            let str = String(num);
+            return formStr('0', digitsAmount - str.length) + str;
+        }
+        function formStr(data, length) {
+            
+        }
+    </script>
+</body>
+
+</html>

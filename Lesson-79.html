@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Lesson-79>
+    </title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 79.1
+        console.log(Math.pow(2, 10));
+
+        //Задача 79.2
+        console.log(Math.sqrt(245));
+
+        //Задача 79.3
+        let arr = [4, 2, 5, 19, 13, 0, 10];
+        let summ = 0;
+        for (let item of arr) {
+            summ = summ + Math.pow(item, 3);
+        };
+        console.log(Math.sqrt(summ));
+
+        //Задача 79.4
+        let a = Math.sqrt(379);
+        console.log(Math.round(a));
+        console.log(a.toFixed(1));
+        console.log(a.toFixed(2));
+
+        //Задача 79.5
+        a = Math.sqrt(587);
+        console.log(Math.floor(a));
+        console.log(Math.ceil(a));
+
+        //Задача 79.6
+        console.log(Math.max(4, -2, 5, 19, -130, 0, 10));
+        console.log(Math.min(4, -2, 5, 19, -130, 0, 10));
+
+        //Задача 79.7
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandomInt(1, 100));
+
+        //Задача 79.8
+        arr = [];
+        for (let i = 0; i <10; i++) {
+            arr[i] = Math.floor(Math.random() * 100);
+        }
+        console.log(arr);
+
+        //Задача 79.9
+        a=Number(prompt('a= '));
+        let b=Number(prompt('b= '));
+            console.log(Math.abs(a-b));
+
+    </script>
+</body>
+
+</html>

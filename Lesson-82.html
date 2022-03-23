@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Pm.SM.Prm(Lesson-82)</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Задача 1
+        let str = 'portugal';
+        let Uppstr = str.slice(0, 1).toUpperCase() + str.slice(1);
+        console.log(Uppstr);
+
+        //Задача 2
+        str = 'portugal';
+        Uppstr = str.slice(0, 2).toUpperCase() + str.slice(2);
+        console.log(Uppstr);
+
+        //Задача 3
+        str = 'London';
+        let Lowstr = str.slice(0, 1).toLowerCase() + str.slice(1);
+        console.log(Lowstr);
+
+        //Задача 4
+        str = 'day1 day2 day3';
+        let days = str.split(' ');
+        for (let i = 0; i < days.length; i++) {
+            days[i] = days[i].slice(0, 1).toUpperCase() + days[i].slice(1);
+        }
+        let result = days.join(' ');
+        console.log(result);
+
+        //Задача 5
+        str = 'var_test_text';
+        let Newstr = str.split('_');
+        for (let i = 0; i < Newstr.length; i++) {
+            Newstr[i] = Newstr[i].slice(0, 1).toUpperCase() + Newstr[i].slice(1);
+        }
+        result = Newstr.join('');
+        console.log(result);
+
+        //Задача 6
+        str = 'var_test_text';
+        Newstr = str.split('_');
+        for (let i = 1; i < Newstr.length; i++) {
+            Newstr[i] = Newstr[i].slice(0, 1).toUpperCase() + Newstr[i].slice(1);
+        }
+        result = Newstr.join('');
+        console.log(result);
+
+        //Задача 7
+        str = 'abc cde fgh';
+        result = str.split(' ').reverse().join(' ');
+        console.log(result);
+    </script>
+</body>
+
+</html>

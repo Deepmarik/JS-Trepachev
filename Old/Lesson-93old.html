@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-93old</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //Задача -1
+        //функция -"счастливый билет"
+
+        /*function isLucky(num) {
+            let str = String(num);
+            let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+            let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+            return sum1==sum2;
+        }
+        for (let i = 100000; i <= 999999; i++) {
+            if (isLucky(i)) {
+                console.log(i);
+            }
+        }
+        console.log(isLucky(123321));*/
+
+        for (let i = 1001; i <= 999999; i++) {
+            if (isLucky(i)) {
+                console.log(i);
+            }
+        }
+
+        function isLucky(num) {
+            let str = String(num);
+            if (str.length == 5) {
+                str = '0' + str;
+            }
+            if (str.length == 4) {
+                str = '00' + str;
+            }
+
+            let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+            let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+
+            return sum1 == sum2;
+        }
+
+        function normalizeNum(num) {
+            let str = String(num);
+            if (str.length == 5) {
+                str = '0' + str;
+            }
+            if (str.length == 4) {
+                str = '00' + str;
+            }
+            if (str.length == 3) {
+                str = '000' + str;
+            }
+            return str;
+        }
+        console.log(normalizeNum(123));
+        console.log(isLucky(123321)); // выведет true - верно
+        console.log(isLucky(123345));
+    </script>
+</body>
+
+</html>
